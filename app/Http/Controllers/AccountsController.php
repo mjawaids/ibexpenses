@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Account;
+use Illuminate\Http\Request;
 
 class AccountsController extends Controller
 {
@@ -22,6 +22,7 @@ class AccountsController extends Controller
         // $accounts = DB::table('accounts')->get();
         $page_title = 'Accounts';
         $accounts = Account::all();
+
         return view('accounts.index', compact('accounts', 'page_title'));
     }
 
@@ -33,28 +34,30 @@ class AccountsController extends Controller
     public function create()
     {
         $page_title = 'Create Account';
+
         return view('accounts.create', compact('page_title'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required',
-            'type' => 'required',
-            'currency' => 'required'
+            'name'     => 'required',
+            'type'     => 'required',
+            'currency' => 'required',
         ]);
 
         Account::create([
-            'name' => request('name'),
-            'type' => request('type'),
+            'name'     => request('name'),
+            'type'     => request('type'),
             'currency' => request('currency'),
-            'user_id' => auth()->id()
+            'user_id'  => auth()->id(),
         ]);
 
         return redirect('/accounts');
@@ -63,21 +66,24 @@ class AccountsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Account  $account
+     * @param Account $account
+     *
      * @return \Illuminate\Http\Response
      */
     public function show(Account $account)
     {
         // $account = DB::table('accounts')->find($id);
-        
+
         $page_title = 'Account Details';
+
         return view('accounts.show', compact('account', 'page_title'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -88,8 +94,9 @@ class AccountsController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int                      $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -100,7 +107,8 @@ class AccountsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
