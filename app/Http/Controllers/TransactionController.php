@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
 use App\Account;
 use App\Category;
 use App\Transaction;
+use App\User;
 use App\Wallet;
 use Illuminate\Http\Request;
 

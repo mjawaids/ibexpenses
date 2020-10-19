@@ -1,7 +1,7 @@
 <?php
 
-use App\User;
 use App\Account;
+use App\User;
 use Illuminate\Database\Seeder;
 
 class FirstUserAccountSeeder extends Seeder
@@ -16,9 +16,9 @@ class FirstUserAccountSeeder extends Seeder
         // TODO: First check if record doesn't exist already
         Account::create([
             'user_id'  => User::first()->id,
-            'name'    => "Default",
+            'name'     => 'Default',
             'type'     => 1,
-            'currency' => "Rs",
+            'currency' => 'Rs',
         ]);
     }
 }

@@ -16,7 +16,7 @@ class FirstUserWalletSeeder extends Seeder
         // TODO: First check if record doesn't exist already
         Wallet::create([
             'user_id'  => User::first()->id,
-            'name'    => "Default"
+            'name'     => 'Default',
         ]);
     }
 }

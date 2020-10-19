@@ -35,23 +35,23 @@ class FirstUserCategorySeeder extends Seeder
                         'Trash',
                     ],
                 ],
-                "Toileteries and Personal Supplies",
-                "Household Supplies",
-                "Family expenses",
-                "Housing" => [
-                    "Rent",
-                    "Repair & Maintenance",
-                    "Bills" => [
-                        "Electricity",
-                        "Gas",
-                        "Water",
-                        "Internet",
-                        "Phone/Mobile bill",
-                        "Maid",
-                        "Sewerage",
-                        "Trash"
-                    ]
-                ]
+                'Toileteries and Personal Supplies',
+                'Household Supplies',
+                'Family expenses',
+                'Housing' => [
+                    'Rent',
+                    'Repair & Maintenance',
+                    'Bills' => [
+                        'Electricity',
+                        'Gas',
+                        'Water',
+                        'Internet',
+                        'Phone/Mobile bill',
+                        'Maid',
+                        'Sewerage',
+                        'Trash',
+                    ],
+                ],
             ],
             'Personal Care',
             'Education' => [
@@ -86,12 +86,12 @@ class FirstUserCategorySeeder extends Seeder
                 'Qurbani',
                 'Hajj, Umrah',
             ],
-            "Shopping" => [
-                "Apparel",
-                "Beauty, Cosmetics, Jewelry, & Accessories",
-                "Gadgets, Devices, & Accessories",
-                "Toys & Kids items",
-                "Other"
+            'Shopping' => [
+                'Apparel',
+                'Beauty, Cosmetics, Jewelry, & Accessories',
+                'Gadgets, Devices, & Accessories',
+                'Toys & Kids items',
+                'Other',
             ],
             'Gifts',
             'Home Renovation & Decor',
