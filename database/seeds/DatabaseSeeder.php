@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
             FirstUserSeeder::class,
             FirstUserCategorySeeder::class,
             FirstUserAccountSeeder::class,
-            FirstUserWalletSeeder::class
+            FirstUserWalletSeeder::class,
         ]);
     }
 }
