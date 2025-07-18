@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/devcontainers/php:1-8.2-bullseye
 
-# Ensure PHP is in PATH
-ENV PATH="/usr/local/bin:$PATH"
+# Ensure PHP is in PATH - add both common PHP locations
+ENV PATH="/usr/local/bin:/usr/bin:$PATH"
 
 # Install MariaDB client
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
