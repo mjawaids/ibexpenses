@@ -25,7 +25,7 @@
 	}
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "sudo chmod a+x \"$(pwd)\" && sudo rm -rf /var/www/html && sudo ln -s \"$(pwd)\" /var/www/html"
+	"postCreateCommand": "echo 'export PATH=\"/usr/local/bin:/usr/bin:$PATH\"' >> ~/.bashrc && echo 'export PATH=\"/usr/local/bin:/usr/bin:$PATH\"' >> ~/.profile"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
